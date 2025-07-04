@@ -40,20 +40,24 @@ width="400">
 ### 🛠️ Environment Setup
 
 ```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/dave21-py/co2-emissions-dashboard.git
 cd co2-emissions-dashboard
 
-# Python virtual environment
+# Create and activate a virtual environment
 python3 -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
+
+# Install required Python libraries
 pip install -r requirements.txt
 
-# Build the data (optional – CI refreshes it nightly)
-python etl.py   # writes scores.csv
+# Launch JupyterLab
+jupyter lab
 
-# Launch the dashboard
-streamlit run app.py
+# Run in JupyterLab's terminal
+panel serve interactive_dashboard.ipynb
+
+# Cmd+Click on local host link
 
 ```
 
@@ -67,11 +71,11 @@ streamlit run app.py
 If you find our work useful, please consider citing:
 
 ```
-@software{geddam2025apacllmdashboard,
-  title  = {Co2 Emissions dashboard},
-  author = {David Geddam},
+@software{geddam2025co2dashboard,
+  title  = {CO2 Emissions Dashboard},
+  author = {David Geddam},
   year   = {2025},
-  url    = {https://github.com/dave21-py/co2-emissions-dashboard.git}
+  url    = {https://github.com/dave21-py/co2-emissions-dashboard}
 }
 ```
 
